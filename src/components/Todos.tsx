@@ -20,7 +20,7 @@ const Todos = () => {
   }
 
   return (
-    <ul className="bg-white dark:bg-slate-800 ">
+    <ul>
       {filterData.map((todo) => {
         return (
           <li
@@ -36,7 +36,7 @@ const Todos = () => {
             />
             <label
               htmlFor={`todo-${todo.id}`}
-              className="checked:line-through  checked:decoration-red-600 text-zinc-700"
+              className="checked:line-through  checked:decoration-red-600"
             >
               {" "}
               {todo.task}{" "}
@@ -45,7 +45,7 @@ const Todos = () => {
             {todo.completed && (
               <button
                 type="button"
-                className="px-4 mb-2  text-[#FFF9F9] bg-[#D14D72] cursor-pointer inline-block justify-self-center"
+                className="px-4 my-2  text-[#FFF9F9] bg-[#D14D72] cursor-pointer inline-block justify-self-center"
                 onClick={() => handleDeleteTodo(todo.id)}
               >
                 Delete
@@ -56,7 +56,7 @@ const Todos = () => {
       })}
       <button
         type="button"
-        className="px-2 bg-red-400 rounded-sm text-yellow-50 ml-80"
+        className="px-2 my-2 bg-red-400 rounded-sm text-yellow-50 ml-80"
         onClick={() => DeleteAll()}
       >
         Delete All
@@ -103,8 +103,7 @@ const Todos = () => {
             depp
           </p>
         </div>
-      </div>
-      {/* <p className="first-line:uppercase first-line:tracking-widest
+        {/* <p className="first-line:uppercase first-line:tracking-widest
   first-letter:text-7xl first-letter:font-bold first-letter:text-slate-900
   first-letter:mr-3 first-letter:float-left
 ">
@@ -118,6 +117,7 @@ const Todos = () => {
   that says "New York Public Library"? Well that may not mean anything to you,
   but that means a lot to me. One whole hell of a lot.
 </p> */}
+      </div>
     </ul>
   );
 };
