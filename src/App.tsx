@@ -15,10 +15,10 @@ function App() {
   
 
   return (
-    <div className={isDarkMode ? "bg-black text-white" : "bg-white"} >
-      <button className={ `${isDarkMode ? "text-zinc-200 bg-white" : "bg-black text-gray-100 "} p-2 rounded-2xl mt-4 ml-[35rem]`} onClick={toggleDarkMode}>{isDarkMode ? <MdDarkMode />: <MdWbSunny />  }</button>
+    <div className={ `${isDarkMode ? "bg-black text-white" : "bg-white"} `}>
+      <button className={ `${isDarkMode ? "text-zinc-200 bg-white" : "bg-black text-gray-100 "} p-2 rounded-2xl mr-3 mt-2  float-right`} onClick={toggleDarkMode}>{isDarkMode ? <MdDarkMode />: <MdWbSunny />  }</button>
     <div className="flex flex-col justify-center items-center gap-y-3">
-      <h4 className="text-5xl font-sans">Todo React-Typescript</h4>
+      <h4 className="text-5xl font-sans max-[375px]:text-sky-400">Todo React-Typescript</h4>
       <Nav/>
       <AddTodo/>
       <Todos/>
